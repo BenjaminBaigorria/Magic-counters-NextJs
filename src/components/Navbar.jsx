@@ -5,36 +5,37 @@ import "./Navbar.css"
 
 export default function Navbar() {
     return (
-        <div>
-            <hr></hr>
-            <div className="login">
-                <ul>
-                    <li>Login</li>
-                    <li>Logout</li>
+        <div className="fixed top-0 left-0 w-full bg-gray-900/80 backdrop-blur-lg shadow-lg text-white z-50">
+            {/* Login */}
+            <div className="flex justify-end px-6 py-2 bg-gray-800/90 text-sm">
+                <ul className="flex space-x-6">
+                    <li className="hover:text-blue-400 cursor-pointer transition duration-300">Login</li>
+                    <li className="hover:text-red-400 cursor-pointer transition duration-300">Logout</li>
                 </ul>
             </div>
-            <nav className="navbar">
-                <Link href={"./"}>
-                    <h1 className="title">
-                        Magic Counters
-                    </h1>
+
+            {/* Navbar Principal */}
+            <nav className="max-w-9xl mx-auto px-6 py-4 flex items-center justify-between">
+                {/* Logo */}
+                <Link href="./" className="text-3xl font-extrabold tracking-wide text-white hover:text-blue-400 transition mr-16">
+                    Magic Counters
                 </Link>
 
-                <ul>
+                {/* Menú */}
+                <ul className="flex space-x-8">
                     <li>
-                        <button className="px-6 py-3 active:outline active:outline-1 text-white bg-gradient-to-r from-purple-700 to-blue-500 rounded-lg shadow-xl transition-all duration-300 hover:shadow-blue-700/50 hover:scale-110">
+                        <button className="active:outline active:outline-1 active:outline-white px-3 py-3 text-white bg-gradient-to-r from-purple-700 to-blue-500 rounded-lg shadow-lg transition-all duration-300 hover:shadow-blue-500/70 hover:scale-105 hover:bg-opacity-90">
                             <h2>Cards</h2>
                         </button>
                     </li>
                     <li>
-                        <button className="px-6 py-3 active:outline active:outline-1 text-white bg-gradient-to-r from-purple-700 to-blue-500 rounded-lg shadow-xl transition-all duration-300 hover:shadow-blue-700/50 hover:scale-110">
-                            <h2  >Decks</h2>
+                        <button className="active:outline active:outline-1 active:outline-white px-3 py-3 text-white bg-gradient-to-r from-purple-700 to-blue-500 rounded-lg shadow-lg transition-all duration-300 hover:shadow-blue-500/70 hover:scale-105 hover:bg-opacity-90">
+                            <h2>Decks</h2>
                         </button>
-
                     </li>
                     <li>
-                        <button className="px-6 py-3 active:outline active:outline-1 text-white bg-gradient-to-r from-purple-700 to-blue-500 rounded-lg shadow-xl transition-all duration-300 hover:shadow-blue-700/50 hover:scale-110">
-                            <h2  >Create Deck</h2>
+                        <button className="active:outline active:outline-1 active:outline-white px-3 py-3 text-white bg-gradient-to-r from-purple-700 to-blue-500 rounded-lg shadow-lg transition-all duration-300 hover:shadow-blue-500/70 hover:scale-105 hover:bg-opacity-90">
+                            <h2>Create Deck</h2>
                         </button>
                     </li>
                 </ul>
