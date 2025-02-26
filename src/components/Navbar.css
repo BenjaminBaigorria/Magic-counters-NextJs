@@ -1,0 +1,42 @@
+.navbar{
+    background: rgb(1, 0, 37);
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 4rem;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.navbar ul{
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navbar ul li{
+    list-style: none;
+}
+
+.title{
+    font-size: 30px;
+    text-decoration:wavy;
+
+}
+
+.login{
+    background: rgb(7, 0, 36);
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.5rem;
+    border: 2px;
+    border-radius: 5px;
+}
+
+.login ul{
+    display: flex;
+    gap: 1rem
+}
+
+.login ul li{
+    list-style: none;
+}
