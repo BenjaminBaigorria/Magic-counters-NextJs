@@ -2,25 +2,42 @@
 
 import Link from "next/link";
 import "./Navbar.css"
+import NewModal from "./Modal";
+import { useState } from "react";
 
 export default function Navbar() {
+
+    const [open, setOpen] = useState(true)
+
     return (
-        <div className="fixed top-0 left-0 w-full bg-gray-900/80 backdrop-blur-lg shadow-lg text-white z-50">
+        <div className="bg-gray-900/80 backdrop-blur-lg shadow-lg text-white z-50">
             {/* Login */}
             <div className="flex justify-end px-6 py-2 bg-gray-800/90 text-sm">
                 <ul className="flex space-x-6">
-                    <li className="hover:text-blue-400 cursor-pointer transition duration-300">Login</li>
+                    <li className="hover:text-blue-400 cursor-pointer transition duration-300" onClick={() => setOpen(true)}>Login</li>
                     <li className="hover:text-red-400 cursor-pointer transition duration-300">Logout</li>
                 </ul>
             </div>
-
+            <NewModal open={open} setOpen={() => setOpen(false)}>
+                <div>
+                    <form>
+                        <div>
+                            <label>Username</label>
+                            <input type="text" name="username"></input>
+                        </div>
+                        <div>
+                            <label>Password</label>
+                            <input type="text" name="password"></input>
+                        </div>
+                    </form>
+                </div>
+            </NewModal>
             {/* Navbar Principal */}
             <nav className="max-w-9xl mx-auto px-6 py-4 flex items-center justify-between">
                 {/* Logo */}
                 <Link href="./" className="text-3xl font-extrabold tracking-wide text-white hover:text-blue-400 transition mr-16">
                     Magic Counters
                 </Link>
-
                 {/* Menú */}
                 <ul className="flex space-x-8">
                     <li>
