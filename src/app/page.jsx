@@ -1,9 +1,9 @@
-
+import SideBarHome from "@/components/SideBarHome";
 
 export default function Home() {
   return (
     <div>
-      <h1></h1>
+      <SideBarHome/>
     </div>
   );
 }
